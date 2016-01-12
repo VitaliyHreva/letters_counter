@@ -34,7 +34,7 @@ Person.getAll = function () {
 }
 
 Person.drawTable = function () {
-	var table = $('<table></table>');
+	var table = $('<table class="table"></table>');
 	var header = $('<tr><th>Name</th><th>Age</th><th>Hourly rates</th></tr>');
 	table.append(header);
 

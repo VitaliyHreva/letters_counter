@@ -1,7 +1,12 @@
 {
   "persons": [
-  	{"name": "John", "age": 25, "hourly_rates": 5},
-  	{"name": "John", "age": 28, "hourly_rates": 6},
-  	{"name": "John", "age": 30, "hourly_rates": 7}
+  	{"id": 1, "name": "John", "age": 25, "hourly_rates": 5, "company": "softserve"},
+  	{"id": 2, "name": "Vitalik", "age": 28, "hourly_rates": 6, "company": "interlink"},
+  	{"id": 3, "name": "Dima", "age": 30, "hourly_rates": 7, "company": "gameloft"}
+  ],
+  "persons_adresses": [
+  	{"id": 3, "person_id": 1, "city": "Lviv", "street": "Shevchenka 50"},
+  	{"id": 2, "person_id": 3, "city": "Kyiv", "street": "Franko 2"},
+  	{"id": 10, "person_id": 2, "city": "Kyiv", "street": "Lesya 34"}
   ]
 }

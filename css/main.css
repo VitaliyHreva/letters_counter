@@ -1,0 +1,25 @@
+.table {
+	width: 100%;
+  max-width: 22%;
+  margin-bottom: 15px;
+  background-color: lightgrey;
+}
+caption {
+	background: #F79361; 
+  padding: 10px;
+  box-shadow: 0 2px  4px 0 rgba(0,0,0,.3);
+  color: white;
+  font-family: "Roboto Slab",serif;
+  font-style: normal;
+  font-size: 26px;
+  margin: 0;
+}
+.fa-arrows {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  cursor: pointer;
+}

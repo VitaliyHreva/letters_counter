@@ -1,7 +1,7 @@
 {
   "persons": [
   	{"id": 1, "name": "John", "age": 25, "hourly_rates": 5, "company": "softserve"},
-  	{"id": 2, "name": "Vitalik", "age": 28, "hourly_rates": 6, "company": "interlink"},
+  	{"id": 2, "name": "Vitalik", "age": 18, "hourly_rates": 6, "company": "interlink"},
   	{"id": 3, "name": "Dima", "age": 30, "hourly_rates": 7, "company": "gameloft"}
   ],
   "persons_adresses": [

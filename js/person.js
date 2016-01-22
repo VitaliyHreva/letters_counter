@@ -87,18 +87,48 @@ Person.drawTable = function () {
 		if (city == 'Kyiv') {
 			personsFromKyiv.push(person);
 		};
+
+
 	});
 
-	var table = new Table(persons, ['name', 'age', 'hourlyRate', 'company']);
-	var secondTable = new Table(adresses, ['name', 'city', 'street']);
-	var city = new Table(personsFromKyiv, ['name', 'age', 'hourlyRate', 'company'])
+	var old = [];
+	$.each(persons, function(i, person) {
+		if (person.age > 20) {
+			old.push(person)
+		};
+	});
+
+	var table = new Table(persons, ['id', 'name', 'age', 'hourlyRate', 'company']);
+	var secondTable = new Table(adresses, ['id', 'name', 'city', 'street']);
+	var city = new Table(personsFromKyiv, ['id', 'name', 'age', 'hourlyRate', 'company'])
+	var older = new Table(old, ['id', 'name', 'age', 'hourlyRate', 'company'])
 	
 	$('body').append(table.draw());
 	$('body').append(secondTable.draw());
 	$('body').append(city.draw());
+	$('body').append(older.draw());
 
 }
 
 $( document ).ready(function() {
   Person.drawTable();
+  $( 'table' ).draggable({
+  	handle: '.fa-arrows',
+  	revert: function () {
+  		var browserHeight = $(window).width();
+  		console.log(browserHeight)
+  		var tableLeftPosition = this.position().left;
+  		console.log(tableLeftPosition)
+
+  		if (tableLeftPosition > browserHeight/2) ( 
+  			$('body').css('background-color', 'red')
+  		);	
+
+  		if (tableLeftPosition < browserHeight/2) (
+  			$('body').css('background-color', 'white')
+  		);
+  	}
+  });
+
+
 });

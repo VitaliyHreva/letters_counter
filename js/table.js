@@ -5,6 +5,7 @@ function Table (collection, headers) {
 	this.draw = function () {
 		var table = $('<table class="table"></table>');
 		var headerTr = $('<tr></tr>');
+		var caption = $('<caption><i class="fa fa-arrows"></i></caption>')
 
 		$.each(this.headers, function (i, thName) {
 			var th = $('<th>' + thName + '</th>');
@@ -21,6 +22,8 @@ function Table (collection, headers) {
 			});
 			table.append(row);
 		});
+
+		table.append(caption);
 		
 		return table;
 	}
